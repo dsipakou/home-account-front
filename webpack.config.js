@@ -11,6 +11,12 @@ module.exports = {
             { test: /\.(js)$/, use: 'babel-loader' }
         ]
     },
+  resolve: {
+    modules: [
+      'node_modules',
+      path.resolve('./src'),
+    ]
+  },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js',
