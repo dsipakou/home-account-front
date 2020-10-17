@@ -14,7 +14,7 @@ module.exports = {
   resolve: {
     modules: [
       'node_modules',
-      path.resolve('./src'),
+      path.resolve(__dirname, 'src'),
     ]
   },
     output: {

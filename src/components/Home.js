@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 import { HomeContainer } from './styled';
 
-import { Login } from 'components/login';
+import { Login } from 'components';
 
 export const Home = () => {
   return (
