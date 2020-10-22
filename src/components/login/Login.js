@@ -13,14 +13,24 @@ export const Login = () => {
         item
         xs={3}
       >
-        <TextField color="primary" label="Username" />
+        <TextField
+          id="outlined-required"
+          label="e-mail"
+          variant="outlined"
+        />
       </Grid>
       <Grid
         container
         item
         xs={3}
       >
-        <TextField color="primary" label="Password" type="password" />
+        <TextField
+          id="outlined-password-input"
+          label="Password"
+          type="password"
+          autoComplete="current-password"
+          variant="outlined"
+        />
       </Grid>
       <Grid
         container
