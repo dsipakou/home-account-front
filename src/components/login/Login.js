@@ -16,7 +16,6 @@ export const Login = () => {
         <TextField
           id="outlined-required"
           label="e-mail"
-          variant="outlined"
         />
       </Grid>
       <Grid
@@ -29,7 +28,6 @@ export const Login = () => {
           label="Password"
           type="password"
           autoComplete="current-password"
-          variant="outlined"
         />
       </Grid>
       <Grid
