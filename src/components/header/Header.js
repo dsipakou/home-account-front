@@ -5,6 +5,7 @@ import { StyledContainer } from './styled';
 
 export const Header = () => {
   const [newUser, setNewUser] = React.useState(false)
+
   return (
     <>
       <AppBar position="static">

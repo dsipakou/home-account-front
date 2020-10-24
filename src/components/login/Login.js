@@ -14,8 +14,7 @@ export const Login = () => {
         xs={3}
       >
         <TextField
-          id="outlined-required"
-          label="e-mail"
+          label="Email"
         />
       </Grid>
       <Grid
@@ -24,7 +23,6 @@ export const Login = () => {
         xs={3}
       >
         <TextField
-          id="outlined-password-input"
           label="Password"
           type="password"
           autoComplete="current-password"
