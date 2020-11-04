@@ -16,6 +16,5 @@ const body = (method, data) => {
   };
 };
 
-export const doLogin = (email, password) => {
-  fetch(loginUrl, body('POST', {email, password}).then((data) => data));
-}
+export const loginRequest = (email, password) => fetch(loginUrl, body('POST', {email, password})).then((data) => data)
+

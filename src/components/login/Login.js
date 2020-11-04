@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Container, Grid, Button, TextField } from '@material-ui/core';
+import { loginRequest } from 'service/api';
 
 export const Login = () => {
   const emailRef = useRef(null);
@@ -8,6 +9,8 @@ export const Login = () => {
   const doLogin = (event) => {
     event.preventDefault();
     const { email, password } = event.currentTarget.elements;
+    const data = loginRequest(email.value, password.value);
+    console.log(data);
     console.log(`User logged in with: ${email.value} and ${password.value}`);
   }
 
