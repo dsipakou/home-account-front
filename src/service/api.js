@@ -18,3 +18,4 @@ const body = (method, data) => {
 
 export const loginRequest = (email, password) => fetch(loginUrl, body('POST', {email, password})).then((data) => data)
 
+export const indexRequest = () => fetch(HOST).then((data) => data)

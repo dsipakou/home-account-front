@@ -1,16 +1,16 @@
 import React, { useRef } from 'react';
 import { Container, Grid, Button, TextField } from '@material-ui/core';
-import { loginRequest } from 'service/api';
+import { loginRequest, indexRequest } from 'service/api';
 
 export const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
-  const doLogin = (event) => {
+  const doLogin = async (event) => {
     event.preventDefault();
     const { email, password } = event.currentTarget.elements;
-    const data = loginRequest(email.value, password.value);
-    console.log(data);
+    const data = await loginRequest(email.value, password.value);
+    console.log(`Hello there: ${data}`);
     console.log(`User logged in with: ${email.value} and ${password.value}`);
   }
 
