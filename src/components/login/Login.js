@@ -10,7 +10,7 @@ export const Login = () => {
     event.preventDefault();
     const { email, password } = event.currentTarget.elements;
     const data = await loginRequest(email.value, password.value);
-    console.log(`Hello there: ${data}`);
+    console.log(`Hello there: ${data.status}`);
     console.log(`User logged in with: ${email.value} and ${password.value}`);
   }
 
