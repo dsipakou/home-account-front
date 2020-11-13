@@ -5,7 +5,7 @@ import { loginRequest, indexRequest } from 'service/api';
 export const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const [loggedIn, setLoggedIn] = React.useState(false);
+  const [ loggedIn, setLoggedIn ] = React.useState(false);
 
   const doLogin = async (event) => {
     event.preventDefault();
@@ -16,7 +16,7 @@ export const Login = () => {
     } else {
       setLoggedIn(false)
     }
-    console.log(`Hello there: ${data.data}`);
+    console.log(`Hello there: ${data}`);
     console.log(`User logged in with: ${email.value} and ${password.value}`);
   }
 
