@@ -16,8 +16,16 @@ const body = (method, data) => {
   };
 };
 
-export const loginRequest = (email, password) => fetch(loginUrl, body('POST', {email, password})).then((data) => data)
+export const loginRequest = async (email, password) => {
+  const response = await fetch(loginUrl, body('POST', {email, password}));
+  const data = await response.json();
+  return data;
+}
 
-export const signUpRequest = (email, password) => fetch(signUpRequest, body('POST', {email, password})).then((data) => data)
+export const signUpRequest = async (email, password) => {
+  const response = await fetch(signUpRequest, body('POST', {email, password}));
+  const data = await response.json();
+  return data;
+}
 
 export const indexRequest = () => fetch(HOST).then((data) => data)
