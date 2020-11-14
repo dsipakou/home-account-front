@@ -18,7 +18,7 @@ export const SignUp = () => {
   }
   return (
     <>
-      { areEqualPasswords && <div>Passwords are not equal</div> }
+      { areEqualPasswords !== 'undefined' && !areEqualPasswords && <div>Passwords are not equal</div> }
       <form onSubmit={doSignup}>
         <Grid container direction="column" alignItems="left">
           <Grid container item xs={3}>
