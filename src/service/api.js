@@ -22,8 +22,8 @@ export const loginRequest = async (email, password) => {
   return data;
 }
 
-export const signUpRequest = async (email, password) => {
-  const response = await fetch(registerUrl, body('POST', {email, password}));
+export const signUpRequest = async (username, email, password) => {
+  const response = await fetch(registerUrl, body('POST', {username, email, password}));
   const data = await response.json();
   return data;
 }
