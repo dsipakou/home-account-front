@@ -9,15 +9,15 @@ export const Login = () => {
 
   const doLogin = async (event) => {
     event.preventDefault();
+
     const { email, password } = event.currentTarget.elements;
     const data = await loginRequest(email.value, password.value);
+
     if (data.status === 200) {
       setLoggedIn(true)
     } else {
       setLoggedIn(false)
     }
-    console.log(`Hello there: ${data}`);
-    console.log(`User logged in with: ${email.value} and ${password.value}`);
   }
 
   return (
