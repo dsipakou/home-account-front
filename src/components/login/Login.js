@@ -1,11 +1,18 @@
 import React, { useRef } from 'react';
 import { Container, Grid, Button, TextField } from '@material-ui/core';
 import { loginRequest, indexRequest } from 'service/api';
+import Cookies from 'universal-cookie';
 
 export const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const [ loggedIn, setLoggedIn ] = React.useState(false);
+
+  React.useEffect(() => {
+    const cookies = new Cookies();
+    const token = cookies.get('authToken');
+    console.log(token);
+  }, [])
 
   const doLogin = async (event) => {
     event.preventDefault();
