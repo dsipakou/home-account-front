@@ -9,10 +9,13 @@ export const Login = () => {
   const [ loggedIn, setLoggedIn ] = React.useState(false);
 
   React.useEffect(() => {
-    const cookies = new Cookies();
-    const token = cookies.get('authToken');
-    console.log(token);
+    checkLogin()
   }, [])
+
+  const checkLogin = async () => {
+    const response = await indexRequest();
+    console.log(response)
+  }
 
   const doLogin = async (event) => {
     event.preventDefault();

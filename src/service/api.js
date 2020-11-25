@@ -30,4 +30,9 @@ export const signUpRequest = async (username, email, password) => {
   return data;
 }
 
-export const indexRequest = () => fetch(HOST).then((data) => data)
+export const indexRequest = async () => {
+  const response = await fetch(HOST, {method: 'GET'});
+  const data = await response.json();
+  return data;
+}
+

@@ -54,5 +54,6 @@
     "styled-components": "^5.2.1",
     "universal-cookie": "^4.0.4",
     "yarn": "^1.22.10"
-  }
+  },
+  "proxy": "http://localhost:1010"
 }
