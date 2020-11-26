@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Button } from '@material-ui/core';
-import { Login, SignUp } from 'components';
+import { Login, SignUp } from 'components/user';
 import { StyledContainer } from './styled';
 
 export const Header = () => {
