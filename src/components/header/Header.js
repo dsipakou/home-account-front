@@ -6,6 +6,13 @@ import { Link } from 'react-router-dom';
 
 export const Header = () => {
 
+  const [ isAuth, setIsAuth ] = React.useState();
+
+  React.useEffect(() => {
+    if (isAuth === undefined)
+      console.log(isAuth);
+  }, [])
+
   return (
     <AppBar position="static">
       <Toolbar>
