@@ -5,6 +5,7 @@ const HOST = `http://${IP_ADDRESS}:${PORT}`
 const registerUrl = `${HOST}/api/users/register`;
 const loginUrl = `${HOST}/api/users/login`;
 const logoutUrl = `${HOST}/api/users/logout`;
+const accountUrl = `${HOST}/api/users/account`;
 
 const body = (method, data) => {
   return {
@@ -32,6 +33,12 @@ export const signUpRequest = async (username, email, password) => {
 
 export const indexRequest = async () => {
   const response = await fetch(HOST, {method: 'GET'});
+  const data = await response.json();
+  return data;
+}
+
+export const accountRequest = async () => {
+  const response = await fetch(accountUrl, body('GET'));
   const data = await response.json();
   return data;
 }
