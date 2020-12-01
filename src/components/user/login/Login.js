@@ -8,10 +8,6 @@ export const Login = () => {
   const passwordRef = useRef(null);
   const [ loggedIn, setLoggedIn ] = React.useState(false);
 
-  React.useEffect(() => {
-    checkLogin()
-  }, [])
-
   const checkLogin = async () => {
     const response = await indexRequest();
     console.log(response)
@@ -23,7 +19,7 @@ export const Login = () => {
     const { email, password } = event.currentTarget.elements;
     const data = await loginRequest(email.value, password.value);
 
-    if (data.status === 200) {
+    if (data.success) {
       setLoggedIn(true)
     } else {
       setLoggedIn(false)
