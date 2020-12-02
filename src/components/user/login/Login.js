@@ -2,11 +2,13 @@ import React, { useRef } from 'react';
 import { Container, Grid, Button, TextField } from '@material-ui/core';
 import { loginRequest, indexRequest } from 'service/api';
 import Cookies from 'universal-cookie';
+import { useHistory } from 'react-router-dom';
 
 export const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const [ loggedIn, setLoggedIn ] = React.useState(false);
+  const history = useHistory();
 
   const checkLogin = async () => {
     const response = await indexRequest();
@@ -25,6 +27,12 @@ export const Login = () => {
       setLoggedIn(false)
     }
   }
+
+  React.useEffect(() => {
+    if (loggedIn) {
+      history.push("/");
+    }
+  })
 
   return (
     <>
