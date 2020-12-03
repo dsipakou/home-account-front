@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Home } from 'components/Home';
+import { Home } from 'components/home';
 import { Header } from 'components';
 import { Account, Login, SignUp} from 'components/user';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
