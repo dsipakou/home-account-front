@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Home } from 'components/home';
-import { Header } from 'components';
+import { Header } from 'components/header';
 import { Account, Login, SignUp} from 'components/user';
+import { Transactions } from 'components/transactions';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './index.css';
 
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/login' component={Login} />
           <Route path='/signup' component={SignUp} />
           <Route path='/account' component={Account} />
+          <Route exact path='/transactions' component={Transactions} />
         </Switch>
       </Router>
     </Container>

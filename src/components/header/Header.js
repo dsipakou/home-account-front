@@ -9,7 +9,7 @@ export const Header = () => {
   const [ isAuth, setIsAuth ] = React.useState();
 
   React.useEffect(() => {
-    if (isAuth === undefined)
+    if (isAuth === 'undefined')
       console.log(isAuth);
   }, [])
 
