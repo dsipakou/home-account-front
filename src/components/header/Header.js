@@ -22,6 +22,9 @@ export const Header = () => {
         <Link to='/signup'>
           <Button>SignUp</Button>
         </Link>
+        <Link to='/'>
+          <Button>Home</Button>
+        </Link>
       </Toolbar>
     </AppBar>
   )

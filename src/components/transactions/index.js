@@ -1,1 +1,2 @@
- export { Transactions } from './Transactions';
+export { Transactions } from './Transactions';
+export { NewTransaction } from './new';
