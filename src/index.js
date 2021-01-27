@@ -11,6 +11,16 @@ import './index.css';
 import { Container } from '@material-ui/core';
 
 const App = () => {
+  const [ loggedIn, setLoggedIn ] = React.useState(false);
+
+  const login = () => {
+    setLoggedIn(true);
+  }
+
+  const logout = () => {
+    setLoggedIn(false);
+  }
+
   return (
     <AuthContext.Provider>
         <Container>
